@@ -280,6 +280,9 @@ func (n Network) Start(binDir string, redirectOutput bool) error {
 	}
 
 	peerAddressList := peerAddressListBuilder.String()
+
+	fmt.Println("peerAddressList")
+
 	err = n.startNodes(binDir, peerAddressList, redirectOutput)
 	return err
 }
